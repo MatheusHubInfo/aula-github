@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
-
 import entites.Department;
 import entites.HourContract;
 import entites.Worker;
@@ -49,6 +48,7 @@ public class Program {
 		System.out.println();
 		System.out.println("Enter month and year ti calculate income (MM/YYYY) : ");
 		String monthAndYear = sc.next();
+		System.out.println();
 		int month = Integer.parseInt(monthAndYear.substring(0, 2));
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		System.out.println("Name : " + worker.getName());
@@ -56,5 +56,8 @@ public class Program {
 		System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.income(year, month)));	
 		
 		sc.close();
+		
+		System.out.println();
+		System.out.println("Thank you ! ");
 	}
 }
